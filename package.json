@@ -1,0 +1,35 @@
+{
+  "name": "openimis-mobile-testing",
+  "version": "1.0.0",
+  "description": "Mobile end-to-end automation framework for openIMIS — iOS (iPhone 17) + Android (Samsung Galaxy S25) via WebdriverIO + Appium",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "wdio run wdio.shared.conf.ts",
+    "test:ios": "wdio run wdio.shared.conf.ts --suite ios",
+    "test:android": "wdio run wdio.shared.conf.ts --suite android",
+    "test:login": "wdio run wdio.shared.conf.ts --spec tests/ui/login.spec.ts",
+    "test:insuree": "wdio run wdio.shared.conf.ts --spec tests/ui/insuree.spec.ts",
+    "test:policy": "wdio run wdio.shared.conf.ts --spec tests/ui/policy.spec.ts",
+    "test:claim": "wdio run wdio.shared.conf.ts --spec tests/ui/claim.spec.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .ts"
+  },
+  "devDependencies": {
+    "@wdio/appium-service": "^9.0.0",
+    "@wdio/cli": "^9.0.0",
+    "@wdio/jasmine-framework": "^9.0.0",
+    "@wdio/mocha-framework": "^9.0.0",
+    "@wdio/spec-reporter": "^9.0.0",
+    "@types/appium": "^1.34.0",
+    "@types/node": "^20.11.0",
+    "@types/webdriverio": "^8.0.0",
+    "appium": "^2.5.0",
+    "appium-uiautomator2-driver": "^2.34.0",
+    "appium-xcuitest-driver": "^5.12.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
