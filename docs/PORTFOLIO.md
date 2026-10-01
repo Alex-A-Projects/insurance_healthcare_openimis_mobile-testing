@@ -12,9 +12,8 @@ Xcode + Android Studio are available — every config file is correct,
 every page object is touch-aware, every test mirrors a real openIMIS
 business scenario.
 
-It complements (not duplicates) the desktop Playwright + TypeScript
-suite I maintain at
-`insurance_healthcare_openimis_playwright-typescript/`.
+It is the mobile counterpart to the desktop openIMIS suite, covering the
+same business scenarios on real mobile devices / emulators.
 
 ## What this demonstrates
 

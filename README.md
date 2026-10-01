@@ -4,6 +4,11 @@ A mobile end-to-end automation framework for [openIMIS](https://openimis.org/) �
 
 Targets **iPhone 17 (iOS 18, Safari / XCUITest)** and **Samsung Galaxy S25 (Android 15, Chrome / UiAutomator2)** via [WebdriverIO](https://webdriver.io/) + [Appium](http://appium.io/).
 
+The framework is intentionally single-stack — there is **no Playwright, no
+Selenium, and no separate web-driver layer**. Everything goes through
+Appium's XCUITest and UiAutomator2 drivers, with WebdriverIO as the test
+runner.
+
 > This is a **portfolio piece** — the test files are written and ready to run the moment a Mac with Xcode (for iOS) and/or Android Studio (for Android) is available, but the project itself does NOT install those tools.
 
 ## Quick start
