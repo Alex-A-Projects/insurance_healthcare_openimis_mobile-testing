@@ -11,6 +11,31 @@ runner.
 
 > This is a **portfolio piece** — the test files are written and ready to run the moment a Mac with Xcode (for iOS) and/or Android Studio (for Android) is available, but the project itself does NOT install those tools.
 
+## Stack
+
+| Layer | Technology | Version |
+| --- | --- | --- |
+| Language | TypeScript | ^5.4 |
+| Runtime | Node.js | >=18 |
+| Test runner | WebdriverIO | ^9.0 |
+| Mobile automation | Appium | ^2.5 |
+| iOS driver | Appium XCUITest driver | ^5.12 |
+| Android driver | Appium UiAutomator2 driver | ^2.34 |
+| BDD / assertion | Mocha + Jasmine (via WDIO) | ^9.0 |
+| Appium service | `@wdio/appium-service` | ^9.0 |
+| Type bindings | `@types/appium`, `@types/webdriverio` | latest |
+
+**Device matrix**
+
+| Device | OS | Driver | Browser |
+| --- | --- | --- | --- |
+| iPhone 17 | iOS 18 | XCUITest | Safari |
+| Samsung Galaxy S25 | Android 15 | UiAutomator2 | Chrome |
+
+Deliberately **not** in the stack: Playwright, Selenium, Cypress, or any
+separate web-driver layer — all browser interaction flows through Appium's
+native drivers.
+
 ## Quick start
 
 ```bash
@@ -90,12 +115,8 @@ appium --address 127.0.0.1 --port 4723
 
 ## Devices
 
-| Device | OS | Driver | Browser |
-| --- | --- | --- | --- |
-| iPhone 17 | iOS 18 | XCUITest | Safari |
-| Samsung Galaxy S25 | Android 15 | UiAutomator2 | Chrome |
-
-Capabilities are defined in `appium/ios.ts` and `appium/android.ts`.
+Capabilities are defined in `appium/ios.ts` and `appium/android.ts`. See
+the [device matrix](#stack) in the Stack section above.
 
 ## Setup checklist (runbook)
 
